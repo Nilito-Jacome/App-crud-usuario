@@ -1,0 +1,118 @@
+.App {
+  background-color: black;
+  max-width: 100%;
+  min-width: 165px;
+  max-height: 100%;
+  min-height: 100px;
+  display: grid;
+  grid-gap: 1em;
+  grid-column: 33%, 33%, 33%;
+  grid-row: 1fr, 1fr, auto;
+}
+
+.Formulario {
+  background-color:#8ba6ff;
+  padding: 0rem 1rem;
+  min-width: 50vh;
+  max-width: 60vh;
+  min-height: 50px;
+  max-height: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Titulo_1 {
+  font-size: 30px;
+  text-align: center;
+  color:brown;
+}
+
+input {
+  width: 1fr;
+  height: 50%;
+  font-size: 20px;
+  text-align: center;
+  color: #05c515;
+  background-color:silver;
+  border: 3px solid #8ba6ff;
+  border-radius: 15px;
+}
+
+.input-wrapper{
+  padding: 0.5rem 1rem;
+  background-color: #06cfdd67;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  border: 1px solid #8292b6;
+  margin: 2px;
+
+}
+
+.Usuario{
+  font-size: 20px;
+  color: #570bd1;
+  border: 2px solid #570bd1;
+  border-radius: 10px;
+  background-color:yellowgreen;
+}
+
+.Eliminar,
+.Editar {
+  border: 2px solid #0bb3d1;
+  border-radius: 10px;
+  background-color:rgb(183, 177, 187);
+  cursor: pointer;
+  font-size: 15px;
+}
+
+ .Total-container{
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+ }
+
+.Titulo_2{
+  font-size: 30px;
+  text-align: center;
+  color:orangered;
+}
+
+.UserList{
+  padding: 1rem 1rem;
+  display: flex;
+  flex-wrap:wrap;
+  place-content: center;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100px;
+  max-height: 100%;
+}
+
+.CardUser{
+  border: 1px solid #0bd14d;
+  text-align: center;
+  background-color:paleturquoise;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  min-width: 300px;
+  padding: 1rem 1rem;
+  margin: 1rem;
+ 
+}
+
+span{
+  color: brown;
+}
+
+label{
+  color:rgb(63, 63, 12)
+}
+
+  
