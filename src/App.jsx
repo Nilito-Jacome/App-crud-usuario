@@ -5,9 +5,7 @@ import { useState, useEffect } from "react";
 import UserList from "./components/UserList";
 
 function App() {
-  const [usersListado, setUsersListado] = useState(
-    []
-  ); /* sirve para generar el estado que se pasara al mcomponente */
+  const [usersListado, setUsersListado] = useState( [] ); /* sirve para generar el estado que se pasara al componente */
   const [userEdit, setUserEdit] = useState(null);
 
   /*
@@ -49,9 +47,7 @@ function App() {
       .delete(
         `https://users-crud.academlo.tech/users/${idUser}/`
       ) /* se coloca la Url de la api que este ligado al Delete con la backtist antes del final de la url esta el id del elemento el cual debe estar referenciado de forma dinamica con el id del elemento*/
-      .then(() =>
-        getData()
-      ) /* Se coloca el getData en el tehen para ejecutar y garantizar que se visualice el cambio una vez que se halla realizado la creacion del usuario */
+      .then(() => getData() ) /* Se coloca el getData en el then para ejecutar y garantizar que se visualice el cambio una vez que se halla realizado la creacion del usuario */
       .catch((error) => console.error(error));
   };
 
@@ -78,23 +74,15 @@ function App() {
   return (
     <div className="Total-container">
       <div className="UserForm">
-        <UserForm
-          addUser={
-            masUser
-          } /* Se coloca primero la propiedad que esta en el componente y luego se iguala a la caracteristica, funcion o estado que se desea pasar al componente */
-          selectUser={userEdit}
-          userUpdate={selectUser}
+        <UserForm addUser = { masUser } /* Se coloca primero la propiedad que esta en el componente y luego se iguala a la caracteristica, funcion o estado que se desea pasar al componente */
+          selectUser = {userEdit}
+          userUpdate = {selectUser}
         />
       </div>
       <div className="UserList">
-        <UserList
-          usersList={
-            usersListado
-          } /* Se coloca primero la propiedad que esta en el componente y luego se iguala a la caracteristica, funcion o estado que se desea pasar al componente */
-          confirmDelete={
-            deleteUser
-          } /* Se coloca primero la propiedad que esta en el componente y luego se iguala a la caracteristica, funcion o estado que se desea pasar al componente */
-          actualizationUser={userActualization}
+        <UserList usersList = { usersListado } /* Se coloca primero la propiedad que esta en el componente y luego se iguala a la caracteristica, funcion o estado que se desea pasar al componente */
+          confirmDelete = { deleteUser } /* Se coloca primero la propiedad que esta en el componente y luego se iguala a la caracteristica, funcion o estado que se desea pasar al componente */
+          actualizationUser = {userActualization}
         />
       </div>
     </div>
