@@ -1,0 +1,56 @@
+
+.UserList {
+    padding: 1rem;
+    gap: 1rem;
+    width: calc(100% - 350px - 4rem);
+    justify-content: center;
+    margin-left: calc(350px + 4rem); 
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .Titulo_2 {
+    font-size: 40px;
+    text-align: center;
+    color: #007BFF;
+  }
+  
+  .CardUser {
+    border: 1px solid #CED4DA;
+    text-align: left;
+    background-color:gainsboro;
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem;
+    margin: 0.5rem;
+    box-shadow: 4px 4px 10px rgba(0, 123, 255, 0.274);
+    border-radius: 15px;
+  }
+  
+  span {
+    color:#007BFF;
+  }
+  
+  .Eliminar, .Editar {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color:whitesmoke;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .Eliminar:hover {
+    background-color:rgb(224, 13, 13);
+    color: seashell;
+   }
+   .Editar:hover {
+    background-color:steelblue;
+    color: seashell;
+   }

@@ -1,19 +1,18 @@
+import './UserForm.css';
 import { useForm } from "react-hook-form";
 import { useEffect } from "react";
 import PropTypes from 'prop-types';
 
+const emptyUser = {  
+    email: "",
+    password: "",
+    first_name: "",
+    last_name: "",
+    birthday: "",  
+};
+
 function UserForm({ addUser, selectUser, userUpdate }) {
   const { register, handleSubmit, reset } = useForm();
-
-  const emptyUser = () => {
-    reset({
-      email: "",
-      password: "",
-      first_name: "",
-      last_name: "",
-      birthday: "",
-    });
-  };
 
   useEffect(() => {
     if (selectUser) {
@@ -21,10 +20,11 @@ function UserForm({ addUser, selectUser, userUpdate }) {
     } else {
       reset(emptyUser);
     }
-  }, [selectUser]);
+  }, [selectUser, reset]);
 
   const submit = (data) => {
     if (selectUser) {
+      console.log("Updating user with ID:", selectUser.idUser);
       userUpdate(data);
     } else {
       addUser(data);
@@ -34,7 +34,7 @@ function UserForm({ addUser, selectUser, userUpdate }) {
 
   return (
     <form onSubmit={handleSubmit(submit)} className="Formulario">
-      <h1 className="Titulo_1"> {selectUser ? "Editar" : "Crear"} Usuario</h1>
+      <h1 className="Titulo_1"> {selectUser ? "Editar" : "CREATE"} USERS</h1>
 
       <div className="input-wrapper">
         <label htmlFor="email"> Email: </label>
@@ -43,6 +43,7 @@ function UserForm({ addUser, selectUser, userUpdate }) {
           id="email"
           placeholder="Your email"
           {...register("email", { required: true })}
+          autoComplete="new-password"
         />
       </div>
       <div className="input-wrapper">
@@ -52,6 +53,7 @@ function UserForm({ addUser, selectUser, userUpdate }) {
           id="password"
           placeholder="Your password"
           {...register("password", { required: true })}
+          autoComplete="new-password"
         />
       </div>
       <div className="input-wrapper">
@@ -82,18 +84,16 @@ function UserForm({ addUser, selectUser, userUpdate }) {
         />
       </div>
       <button className="Usuario" type="submit">
-        {" "}
-        {selectUser ? "Editar" : "Crear"} usuario{" "}
+        {selectUser ? "Editar" : "Create"} User
       </button>
     </form>
   );
 }
 
-export default UserForm;
-
 UserForm.propTypes = {
-    addUser : PropTypes.string,
-    selectUser : PropTypes.string,
-    userUpdate : PropTypes.string,
-}
+  addUser: PropTypes.func.isRequired,
+  selectUser: PropTypes.object,
+  userUpdate: PropTypes.func.isRequired,
+};
 
+export default UserForm;

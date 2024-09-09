@@ -1,0 +1,55 @@
+.Formulario {
+  background-color: gainsboro;
+  padding: 1rem;
+  width: 300px; /* Tamaño fijo para el formulario */
+  min-height: 50px;
+  max-height: 100%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Hace que el formulario flote en un lugar fijo */
+  top: 4rem; /* La distancia desde la parte superior de la ventana */
+  left: 40px; /* La distancia desde el borde izquierdo de la ventana */
+  z-index: 1000; /* Asegura que esté encima de otros elementos */
+  box-shadow: 4px 4px 10px rgba(0, 123, 255, 0.274);
+}
+ 
+  .Titulo_1 {
+    font-size: 30px;
+    text-align: center;
+    color: #007BFF;
+  }
+  
+  .input-wrapper {
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    border: 1px solid gainsboro;
+    margin: 2px;
+  }
+  
+  input {
+    width: 100%;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+    color:#007BFF;
+    background-color: white;
+    border: 0.5px solid black;
+    border-radius: 15px;
+  }
+  
+  .Usuario {
+    font-size: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    
+  }
+
+   .Usuario:hover {
+    background-color:limegreen;
+   }
