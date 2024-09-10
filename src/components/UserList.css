@@ -1,9 +1,9 @@
 .UserList {
     padding: 1rem;
     gap: 1rem;
-    width: calc(100% - 350px - 2rem);
+    width: calc(100% - 320px - 1rem);
     justify-content: center;
-    margin-left: calc(350px + 2rem); 
+    margin-left: calc(350px + 1rem); 
     display: flex;
     flex-wrap: wrap;
   }
