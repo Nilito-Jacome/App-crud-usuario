@@ -1,10 +1,9 @@
-
 .UserList {
     padding: 1rem;
     gap: 1rem;
-    width: calc(100% - 350px - 4rem);
+    width: calc(100% - 350px - 2rem);
     justify-content: center;
-    margin-left: calc(350px + 4rem); 
+    margin-left: calc(350px + 2rem); 
     display: flex;
     flex-wrap: wrap;
   }
@@ -54,3 +53,64 @@
     background-color:steelblue;
     color: seashell;
    }
+
+   @media (max-width: 425px) {
+    .UserList {
+      width: calc(100% - 200px - 1rem);
+      margin-left: calc(200px + 1rem);
+    }
+  
+    .Titulo_2 {
+      font-size: 30px;
+    }
+    
+    .CardUser {
+      max-width: 200px;
+      font-size: 14px;
+    }
+    .Eliminar, .Editar {
+      font-size: 12px;
+      padding: 2px;
+      margin: 3px;
+    }
+  }
+
+/* Para tabletas en modo vertical (hasta 768px) */
+@media (max-width: 375px) {
+  .UserList {
+    width: calc(100% - 175px - 1rem);
+    margin-left: calc(175px + 1rem);
+  }
+
+  .Titulo_2 {
+    font-size: 25px;
+  }
+  
+  .CardUser {
+    max-width: 175px;
+    font-size: 12px;
+  }
+  .Eliminar, .Editar {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 320px) {
+  .UserList {
+    width: calc(100% - 150px - 1rem);
+    margin-left: calc(150px + 1rem);
+  }
+
+  .Titulo_2 {
+    font-size: 15px;
+  }
+  
+  .CardUser {
+    max-width: 150px;
+    font-size: 10px;
+  }
+  .Eliminar, .Editar {
+    font-size: 9px;
+    margin: 1px;
+  }
+}

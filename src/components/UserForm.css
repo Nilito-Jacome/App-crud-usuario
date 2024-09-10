@@ -1,7 +1,7 @@
 .Formulario {
   background-color: gainsboro;
   padding: 1rem;
-  width: 300px; /* Tamaño fijo para el formulario */
+  width: 300px;
   min-height: 50px;
   max-height: 100%;
   border-radius: 20px;
@@ -9,10 +9,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: fixed; /* Hace que el formulario flote en un lugar fijo */
-  top: 4rem; /* La distancia desde la parte superior de la ventana */
-  left: 40px; /* La distancia desde el borde izquierdo de la ventana */
-  z-index: 1000; /* Asegura que esté encima de otros elementos */
+  position: fixed; 
+  top: 4rem; 
+  left: 40px; 
+  z-index: 1000; 
   box-shadow: 4px 4px 10px rgba(0, 123, 255, 0.274);
 }
  
@@ -53,3 +53,64 @@
    .Usuario:hover {
     background-color:limegreen;
    }
+
+   @media (max-width: 425px) {
+    .Formulario {
+      width: 200px;
+      top: 5rem; 
+      left: 10px; 
+    }
+    .Titulo_1 {
+      font-size: 30px;
+    }
+    .input-wrapper {
+      padding: 0.1rem 0.1rem;
+      font-size: 18px;
+      margin: 0.5px;
+      border-radius: 5px;
+    }
+    input {
+      font-size: 16px;
+      height: 20px;
+    }
+    .Usuario {
+      font-size: 15px;
+      border-radius: 5px;
+      padding: 5px;
+    }
+  }
+   /* Para tabletas en modo vertical (hasta 768px) */
+@media (max-width: 375px) {
+  .Formulario {
+    width: 175px;
+  }
+  .Titulo_1 {
+    font-size: 25px;
+  }
+  .input-wrapper {
+    font-size: 18px;
+  }
+  input {
+    font-size: 15px;
+  }
+}
+
+/* Para teléfonos móviles (hasta 480px) */
+@media (max-width: 320px) {
+  .Formulario {
+    width: 150px; 
+  }
+  .Titulo_1 {
+    font-size: 15px;
+  }
+  .input-wrapper {
+    font-size: 10px;
+  }
+  input {
+    font-size: 12px;
+  }
+  .Usuario {
+    font-size: 12px;
+    padding: 2px;
+  }
+}
